@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Perdido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="jogo">
+
+    <div id="areaCanvas">
+      <canvas id="canvas"></canvas>
+
+      <div id="hud">
+        <div class="linha"><span id="status" class="offline">● Desconectado</span></div>
+        <div class="linha">Jogadores online: <span id="jogadoresOnline">0</span></div>
+        <div class="linha titulo-nivel">Nível <span id="nivel">1</span></div>
+
+        <div class="barra vida">
+          <div id="vidaBarra"></div>
+          <span id="vidaTexto">100 / 100</span>
+        </div>
+
+        <div class="barra xp">
+          <div id="xpBarra"></div>
+          <span id="xpTexto">0 / 50 XP</span>
+        </div>
+      </div>
+
+      <div id="mensagens"></div>
+
+      <div id="aviso">
+        <h1>Mundo Perdido</h1>
+        <p id="avisoTexto">Conectando ao servidor...</p>
+      </div>
+    </div>
+
+    <aside id="painel">
+      <h2>Equipamento</h2>
+      <div id="equipamento"></div>
+
+      <div id="atributos">
+        <div>Dano: <strong id="atrDano">0</strong></div>
+        <div>Defesa: <strong id="atrDefesa">0</strong></div>
+      </div>
+
+      <h2>Inventário</h2>
+      <div id="inventario"></div>
+      <p class="dica">Clique em um item do inventário para equipar. Clique em um item equipado para guardar.</p>
+
+      <h2>Controles</h2>
+      <ul id="controles">
+        <li><kbd>W A S D</kbd> mover</li>
+        <li><kbd>Shift</kbd> correr</li>
+        <li><kbd>Espaço</kbd> atacar</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
